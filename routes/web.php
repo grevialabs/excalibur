@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pdf', 'PageController@pdf');
+
+Route::prefix('page')->group(function () {
+    Route::get('/pdf', 'PageController@pdf');
+});
