@@ -53,4 +53,20 @@ class PageController extends Controller
         return $pdf->stream('invoice.pdf');
 
     }
+
+    public function login ()
+    {
+        // echo "hello login";
+        // die;
+        if ($_POST) {
+            $post = NULL;
+            $post = $_POST;
+            var_dump($post);
+            die;
+        }
+
+        $param = NULL;
+        $param['CONTENT'] = view('page.login');
+        return view('index',$param);
+    }
 }

@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/pdf', 'PageController@pdf');
+Route::any('/login', 'PageController@login');
 
 Route::prefix('page')->group(function () {
     Route::get('/pdf', 'PageController@pdf');
